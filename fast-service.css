@@ -1,0 +1,545 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Sansita:wght@900&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-color: rgb(255, 255, 255);
+    }
+    .espaco{
+        margin-top: 150px;
+    }
+    .espaco2{
+        height: 150px;
+        margin-top: 150px;
+        background: #fff9eb;
+    }
+    html {
+        height: 500vh;
+        background-color: rgb(255, 255, 255)
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    header img {
+        width: 120px;
+        margin-top: 15px;
+    }
+
+    header ul {
+        list-style-type: none;
+    }
+
+    header ul li {
+        display: inline-block;
+        margin: 0 40px;
+    }
+
+    header ul li a {
+        color: #000000;
+        text-decoration: none;
+        position: relative;
+    }
+
+    header ul li a:hover::after {
+        width: 100%;
+    }
+
+    header ul li a::after {
+        content: " ";
+        width: 0;
+        height: 4px;
+        background-color: #ffba3a;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        transition: width 0.3s ease-in-out;
+    }
+
+    header {
+        width: 100%;
+        padding: 20px 4%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: .5s;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .parte-inical{
+        padding-top: 450px;
+    }
+    header.rolagem {
+        background-color: #ffffff;
+        padding: 5px;
+        z-index: 10;
+    }
+
+    header.rolagem a, header.rolagem i {
+        color: #ff7b00;
+    }
+
+    .imagens-fundo {
+        z-index: 0;
+        position: relative;
+    }
+
+    .prato-principal {
+        position: absolute;
+        margin-left: 100px;
+        margin-top: -10px;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        animation: img 2s ease;
+        width: 600px;
+        animation: entrada 1s ease-out 0.2s forwards;
+    }
+
+    .planta-1 {
+        width: 200px;
+        margin-top: 300px;
+        margin-left: 650px;
+        animation: img 2s ease;
+        position: absolute;
+        animation: flutu 6s ease-in-out infinite;
+        animation: entrada 2s ease-out 0.2s forwards;
+    }
+
+    .planta-2 {
+        width: 250px;
+        margin-bottom: 500px;
+        animation: img 2s ease;
+        margin-left: -110px;
+        animation: flutu 6s ease-in-out infinite;
+        animation: entrada 2s ease-out 0.2s forwards;
+    }
+
+    .planta-3 {
+        position: absolute;
+        animation: img 2s ease;
+        width: 250px;
+        margin-left: -190px;
+        margin-top: 480px;
+        animation: flutu 6s ease-in-out infinite;
+        animation: entrada 2s ease-out 0.2s forwards;
+    }
+
+    .secao-principal {
+        margin-left: 740px;
+        margin-top: -690px;
+    }
+
+    .texto-principal {
+        z-index: 1;
+        margin-left: -600px;
+        margin-top: 120px;
+        animation: entrada 2s ease-out 0.2s forwards;
+    }
+
+    .texto-principal h1 {
+        font-size: 100px;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        animation: slideleft 2s ease;
+    }
+
+    .texto-service {
+        color: #ff9900;
+        font-family: "Sansita", sans-serif;
+    }
+
+    .texto-principal span.destaque {
+        color: #ffcc00;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .slogan {
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: -10px;
+        margin-top: -10px;
+    }
+
+    .botao {
+        background: linear-gradient(to right, #ffcc00, #ff9900);
+        --webkit-background-clip: text;
+        --webkit-text-fill-color: transparent;
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+        width: 290px;
+        margin-top: 30px;
+        border: none;
+        border-radius: 300px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .link-botao {
+        color: white;
+    }
+
+    .botao:hover {
+        background-color: orange;
+        animation: puls 1s ease-in-out infinite alternate;
+    }
+
+    .redes-principal {
+        transform: translate(-5000px, 1px);
+        animation: entrada 1s ease-out 0.2s forwards;
+    }
+
+    .icones-sociais {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        margin-left: 1000px;
+        margin-top: 30px;
+        transform: translate(-1000px);
+    }
+
+    .icones-sociais > div {
+        margin-right: 10px;
+    }
+
+    .icone-facebook,
+    .icone-instagram,
+    .icone-whatsapp {
+        width: 70px;
+        height: 30px;
+        color: #020202;
+        display: flex;
+        font-size: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        font-size: 30px;
+        transform: translateX(-530px);
+    }
+
+    .icones-restaurante2 {
+        z-index: 0;
+        rotate: -90deg;
+        margin-left: -1200px;
+        transform: rotate(180deg);
+        margin-top: -500px;
+    }
+
+
+    /* Animações */
+    @keyframes img {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes flutu {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes puls {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+    @keyframes entrada {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    /* ESTILIZAÇÃO PARTE FUNCIONALIDADE */
+
+    .funcionalidades{
+        width: 9000px;
+        height: 500px;
+        display: flex;
+        background-color: #ffba3a;
+        margin-left: 0px;
+    }
+    .card-funcionalidade-1{
+        width: 250px;
+        height: 300px;
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 90px;
+        margin-left: 250px;
+        transition: transform 0.3s ease;
+    }
+    .card-funcionalidade-2{
+        width: 250px;
+        height: 300px;
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 90px;
+        margin-left: 70px;
+        transition: transform 0.3s ease;
+    }
+    .card-funcionalidade-3{
+        width: 250px;
+        height: 300px;
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 90px;
+        margin-left: 60px;
+        transition: transform 0.3s ease;
+    }
+    .card-funcionalidade-1:hover, .card-funcionalidade-2:hover, .card-funcionalidade-3:hover {
+        transform: scale(1.1)
+    }
+    .imagem-do-carpadio{
+        margin-top: 10px;
+        margin-left: 95px;
+        width: 70px;
+    }
+    .paragrafo-popular{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 15px;
+
+    }
+    
+    /* Estilo da seção de desenvolvedores */
+    .time-dev {
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 0;
+    }
+    /* logo fast-serv
+    ice */
+    .logo-fast-service-parte-cards {
+        width: 150px;
+        transform: translate(30px, 90px);
+    }
+
+    /* Título principal */
+    .titulo-time {
+        font-size: 50px;
+        margin-top: 5px;
+        margin-left: 50px;
+        animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;
+        transform: translateY(50px);
+    }
+
+    /* Texto descritivo sobre os desenvolvedores */
+    .descricao-time {
+        margin-bottom: 100px;
+        transform: none; 
+        margin-left: 50px; 
+        margin-top: 45px;
+    }
+
+
+    /*========CARDS==================*/
+
+    .carousel {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .carousel-images {
+        display: flex;
+        transition: transform 0.5s ease-in-out; /* Transição suave */
+        width: calc(100% * 6); /* Ajustado para acomodar todas as imagens */
+        animation: scroll 15s linear infinite; /* Animação contínua */
+    }
+
+    .carousel-images img {
+        width: auto; /* Ajusta a largura automaticamente */
+        height: 500px; /* Define a altura desejada */
+        object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    }
+    
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-33.33%); } /* Move o total para fora da tela */
+    }
+    
+    /* Estilo geral da seção de avaliações */
+    .avaliacoes {
+        background-color: #fff9eb;
+        display: block;
+        text-align: center;
+    }
+
+    /* Estilo do título principal */
+    .titulo-principal {
+        font-size: 60px;
+        color: #333;
+        animation: fadeIn 2s ease-in-out, colorChange 4s infinite alternate;
+        transform: translateY(90px);
+    }
+
+    /* Estilo dos textos destacados */
+    .destaque {
+        color: #ff9900;
+    }
+
+    /* Estilo da imagem do chefe */
+    .imagem-chefe {
+        width: 900px;
+        margin-left: -840px;
+        margin-top: -150px;
+    }
+
+    /* Animações */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes colorChange {
+        from {
+            color: #333;
+        }
+        to {
+            color: #555;
+        }
+    }
+
+    /* Estilo dos cartões de avaliação */
+    .avaliacoes-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-left: 0;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilo individual dos cartões de avaliação */
+    .avaliacao-card {
+        width: 270px;
+        height: 340px;
+        background-color: #ffeabf;
+        border-radius: 20px;
+        margin-left: 20px; 
+        margin-top: -880px;
+        transform: translate(220px, 20px);
+        transition: transform 0.3s ease; 
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    /* Estilo do conteúdo de cada avaliação */
+    .avaliacao-card:hover {
+        transform: translate(220px, 20px) scale(1.1); /* Aumenta o tamanho para 110% */
+    }
+    
+    .avaliacao-conteudo {
+        padding: 20px;
+    }
+
+    /* Estilo da imagem do perfil */
+    .avaliacao-perfil {
+        width: 70px;
+        margin-top: -50px;
+    }
+
+    /* Estilo do nome da pessoa que avaliou */
+    .avaliacao-nome {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Estilo das estrelas de avaliação */
+    .avaliacao-estrelas {
+        width: 180px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        transform: translate(20px, 200px);
+    }
+
+    /* Estilo do comentário */
+    .avaliacao-comentario {
+        font-size: 15px;
+        transform: translateY(-290px);
+    }
+
+    /* Estilo do texto do comentário */
+    .comentario-texto {
+        transform: translate(0px, 330px);
+        font-weight: 400;
+    }
+
+/* PARTE DE ESTIKIZAÇÃO DO FOOTER */
+footer{
+    background-color: #ffd891;
+    transform: translateY(190px)
+}
+.imagem-footer{
+    width: 190px;
+    transform: translateX(600px);
+}
+.rede-sociais-footer{
+    width: 120px;
+    filter: grayscale(50%) brightness(100%);
+    transform: translate(900px, -35px);
+}
+.h2-footer{
+    margin-left: 1086px;
+    margin-top: -10px;
+    transform: translateY(-65px);
+    color: white;
+}
+.direitos{
+    background-color: #ff9900;
+}
+.paragrafo-footer{
+    font-size: 20px;
+    color: white;
+    margin-left: 600px;
+}
