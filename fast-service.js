@@ -21,15 +21,27 @@ var TrandingSlider = new Swiper('.tranding-slider', {
   }
 });
 
-const carouselList = document.querySelector('.carousel__list');
-const nextButton = document.querySelector('.carousel__button--next');
-const prevButton = document.querySelector('.carousel__button--prev');
+const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
+let index = 0;
 
-// Opcional: pausar/retomar a animação ao passar o mouse
-carouselList.addEventListener('mouseenter', () => {
-  carouselList.style.animationPlayState = 'paused';
-});
+function moveCarousel() {
+    index++;
+    
+    // Se o índice atingir o número total de imagens, reinicie
+    if (index >= images.length) {
+        index = 0;
+        carouselImages.style.transition = 'none'; // Remove transição ao reiniciar
+        carouselImages.style.transform = `translateX(0)`;
+        
+        // Para garantir a transição ao voltar
+        setTimeout(() => {
+            carouselImages.style.transition = 'transform 0.5s ease-in-out'; // Reativa a transição
+        }, 50);
+    } else {
+        carouselImages.style.transform = `translateX(-${index * 100}%)`;
+    }
+}
 
-carouselList.addEventListener('mouseleave', () => {
-  carouselList.style.animationPlayState = 'running';
-});
+// Mover a cada 3 segundos
+setInterval(moveCarousel, 3000);
